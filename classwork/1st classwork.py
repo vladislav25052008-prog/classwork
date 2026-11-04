@@ -1,3 +1,4 @@
+# 1
 class Counter:
     value = 0
 
@@ -19,7 +20,7 @@ c1.increase()
 c1.show()
 
 
-
+# 2
 class Book:
     def __init__(self,title,author,pages):
         self.title = title
@@ -43,4 +44,37 @@ print("long book", book2.is_long())
 book1.show_info()
 print("short book", book1.is_long())
 
+# 3
+
+class BankAccount:
+
+    def __init__(self, owner, balance=0):
+        self.owner = owner
+        self.balance = balance
+
+
+    def deposit(self, amount):
+        if amount > 0:
+            self.balance += amount
+            print(f"balanced top up {amount} uah")
+        else:
+            print("top up might be more than 0")
+
+
+    def show_balance(self):
+        print(f"owner: {self.owner}, balance: {self.balance} uah")
+
+
+
+account1 = BankAccount("ivan", 1000)
+account2 = BankAccount("olena", 200)
+
+account1.show_balance()
+account1.deposit(500)
+account1.show_balance()
+
+account2.show_balance()
+account2.deposit(-100)
+account2.deposit(250)
+account2.show_balance()
 
