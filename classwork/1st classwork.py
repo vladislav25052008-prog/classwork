@@ -1,4 +1,7 @@
 # 1
+import math
+
+
 class Counter:
     value = 0
 
@@ -68,13 +71,30 @@ class BankAccount:
 
 account1 = BankAccount("ivan", 1000)
 account2 = BankAccount("olena", 200)
-
+account1.deposit(100)
+account2.deposit(200)
 account1.show_balance()
-account1.deposit(500)
-account1.show_balance()
-
 account2.show_balance()
-account2.deposit(-100)
-account2.deposit(250)
-account2.show_balance()
+account1.deposit(-100)
 
+
+
+
+class Calculator:
+    def __double(self, number):
+        return number * 2
+
+    def add(self, num1, num2):
+        return num1 + num2
+
+    def sub(self, num1, num2):
+        return num1 - num2
+
+    def mul(self, num1, num2):
+        return num1 * num2
+
+    def calculate(self, number):
+        return self.__double(number) + 33
+
+calc = Calculator()
+print(calc.calculate(2))
